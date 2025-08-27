@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="../Styles/rompecabezas.css"/>
+        <link rel="icon" href="../Images/icono.png"/>
         <title>Juego de Rompecabezas</title>
     </head>
 

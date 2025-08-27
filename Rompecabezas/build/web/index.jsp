@@ -6,14 +6,32 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Pagina Principal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Images/icono.png"/>
+        <link rel="stylesheet" href="Styles/index.css"/>
+        <title>Juegos Disponibles</title>
     </head>
-
     <body>
-        <h1>Link del Rompecabezas</h1>
-        <a href="Index/rompecabezas.jsp">Rompecabezas</a>
+        <div class="tarjeta">
+            <div class="contenedor-icono">
+                <img class="image" src="Images/pollocontenis.jpg" alt=""/>
+            </div>
+
+            <h2 class="nombre">Rompecabezas</h2>
+
+            <ul class="habilidades">
+                <li>Agilidad</li>
+                <li>Pensamiento</li>
+                <li>Resolución de Problemas</li>
+                <li>Concentracion</li>
+            </ul>
+
+            <button class="boton">
+                <a class="a-boton" href="Index/rompecabezas.jsp">Jugar</a>
+            </button>
+        </div>
     </body>
 </html>
