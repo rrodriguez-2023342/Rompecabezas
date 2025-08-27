@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    padding: 10px;
+    background-color: #D9FFFA;
+    text-align: center;
+}
+
+.container1 img{
+    height: 300px;
+    max-height: 400px;
+    max-width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    margin: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    align-items: center;
+    align-content: space-around;
+    display: flex;
+}
+
+.puzzle {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+    gap: 5px;
+    padding: 10px 20px 20px 55px;
+}
+
+.celda {
+    background: #007BFF;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.celda:hover {
+    background: #0056b3;
+}
+
+.vacio {
+    background: #f0f0f0;
+    cursor: default;
+}
