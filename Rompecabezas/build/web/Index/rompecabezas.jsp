@@ -35,7 +35,9 @@
                     </div>
 
                     <div class="puzzle-grid">
-                        <div id="puzzle" class="puzzle"></div>
+                        <div class="rompecabezas">
+                           <div id="puzzle" class="puzzle"></div> 
+                        </div>                     
                     </div>
                 </div>   
             </div>
@@ -46,6 +48,6 @@
                 </button>
             </div>
         </div>
-        <<script src="../js/script.js"></script>
+        <script src="../js/script.js"></script>
     </body>
 </html>
