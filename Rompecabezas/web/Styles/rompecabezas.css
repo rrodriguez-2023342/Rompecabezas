@@ -21,7 +21,6 @@ body {
     padding: 40px;
     max-width: 800px;
     width: 100%;
-    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -48,7 +47,8 @@ body {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 40px;
-    align-items: start;
+    align-items: center ;
+    align-content: center;
 }
 
 .espacio-juego {
@@ -64,10 +64,10 @@ body {
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     margin-bottom: 20px;
-    border: 3px solid #fff;
+    border: 3px solid #fff; 
 }
 
-.img-ref img {
+.img-ref img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -91,31 +91,30 @@ body {
     letter-spacing: 1px;
 }
 
-.puzzle-grid{
-    border-radius: 16px;
-    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 24px;
-    align-items: center;
-    align-content: center;
-}
 
-.puzzle{
+.puzzle {
     display: grid;
     grid-template-columns: repeat(4, 80px);
     grid-template-rows: repeat(4, 80px);
     gap: 5px;
-    padding: 10px 20px 20px 55px;
+    padding: 10px;
 }
 
 .puzzle:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.rompecabezas {
+    align-content: center;
+    align-items: center;
 }
 
 .controls {
     display: flex;
     gap: 16px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .btn {
@@ -243,11 +242,3 @@ body {
         transform: translateY(0);
     }
 }*/
-
-.game-container {
-    animation: slideIn 0.6s ease-out;
-}
-
-.puzzle {
-    animation: slideIn 0.4s ease-out;
-}
