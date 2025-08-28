@@ -1,6 +1,5 @@
 // rompecabezas de numeros
 let puzzleContainer = document.getElementById("puzzle");
-let mensaje = document.getElementById("mensaje");
 
 let piezas = ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", 
     "image7.png", "image8.png", "image9.png", "image10.png", "image11.png", "image12.png", 
@@ -97,14 +96,12 @@ function verificar() {
         clearInterval(cronometro);
         cronometro = null;
         alert("🎉 ¡Felicidades! Completaste el rompecabezas.");
-        mensaje.innerText = "🎉 ¡Felicidades! Completaste el rompecabezas.";
     }
 }
 
 // Reiniciar juego
 function reiniciar(){
     estado = mezclar(piezas);
-    mensaje.innerText = "";
     dibujar();
     actualizarCronometro(true);
 }

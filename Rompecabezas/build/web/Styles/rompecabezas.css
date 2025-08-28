@@ -1,43 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f0f2f5;
-    display: grid;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #4a5c7a 0%, #2c3e50 50%, #34495e 100%);
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 10px;
-    padding: 10px;
-    background-color: #D9FFFA;
-    text-align: center;
+    padding: 20px;
 }
 
-.container1 img{
-    height: 300px;
-    max-height: 400px;
-    max-width: 400px;
-    margin-left: 20px;
-    margin-right: 20px;
+.div-juego {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     padding: 40px;
-    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.container {
-    background: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    margin: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.encabezado {
     text-align: center;
-    align-items: center;
-    align-content: space-around;
+    margin-bottom: 30px;
+}
+
+.titulo {
+    color: #2c3e50;
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.p-juego {
+    color: #5a6c7d;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: start;
+}
+
+.espacio-juego {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.puzzle {
+.img-ref {
+    width: 280px;
+    height: 210px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    margin-bottom: 20px;
+    border: 3px solid #fff;
+}
+
+.img-ref img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.espacio-juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-tempo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    letter-spacing: 1px;
+}
+
+.puzzle-grid{
+    border-radius: 16px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    align-items: center;
+    align-content: center;
+}
+
+.puzzle{
     display: grid;
     grid-template-columns: repeat(4, 80px);
     grid-template-rows: repeat(4, 80px);
     gap: 5px;
     padding: 10px 20px 20px 55px;
+}
+
+.puzzle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.controls {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .celda {
@@ -60,4 +151,103 @@ body {
 .vacio {
     background: #f0f0f0;
     cursor: default;
+}
+
+.btn-reset {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    color: white;
+}
+
+.btn-reset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(238, 90, 82, 0.3);
+}
+
+.btn-hint {
+    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+    color: white;
+}
+
+.a-hint{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-hint:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(78, 205, 196, 0.3);
+}
+
+/* Responsive design */
+/*
+@media (max-width: 768px) {
+    .div-juego {
+        padding: 24px;
+    }
+
+    .game-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .game-title {
+        font-size: 1.8em;
+    }
+
+    .reference-image {
+        width: 240px;
+        height: 180px;
+    }
+
+    .puzzle-piece {
+        width: 60px;
+        height: 60px;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .puzzle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reference-image {
+        width: 200px;
+        height: 150px;
+    }
+
+    .timer-container {
+        font-size: 1.2em;
+    }
+}*/
+
+/* Animaciones adicionales */
+/*
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}*/
+
+.game-container {
+    animation: slideIn 0.6s ease-out;
+}
+
+.puzzle {
+    animation: slideIn 0.4s ease-out;
 }
